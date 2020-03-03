@@ -25,12 +25,13 @@ public class Resistors {
         
         int sub1 = 3;
         String ColorInput = Input.next();
-        String ColorDetection1 = ColorInput.substring(0,sub1);;
+        String ColorDetection1 = ColorInput.substring(0,ColorInput.indexOf("-"));
+        String ColorDetection2 = ColorInput.substring(ColorInput.indexOf("-"), ColorInput.lastIndexOf("-"));
+        String ColorDetection3 = ColorInput.substring(ColorInput.lastIndexOf("-"), ColorInput.length());
+        
         
     
-        if(ColorDetection1.contains("-")){
-            
-        }
+        
         //System.out.println("The Value of your Resistor is " + totalOhms + " Ohms");
     }
     
