@@ -16,20 +16,37 @@ public class Resistors {
      */
     public static void main(String[] args) {
         int totalOhms = 0;
-        int Black = 0, Brown = 1, red = 2, Orange = 3, Yellow = 4, Green = 5, Blue = 6, Violet = 7, Grey = 8, White = 9;
+        int Black = 0, Brown = 1, Red = 2, Orange = 3, Yellow = 4, Green = 5, Blue = 6, Violet = 7, Grey = 8, White = 9;
+        int values[] = {Black, Brown, Red, Orange, Yellow, Green, Blue, Violet, Grey, White};
         
-        int []colours = {Black, red, Orange, Yellow, Green, Blue, Violet, Grey, White};
+        String []colours = {"Black", "Brown", "Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Grey", "White"};
         
         Scanner Input = new Scanner(System.in);
-        System.out.println("Please Enter Your Resistor Colors, with a - between all of them");
+        System.out.println("Please Enter Your Resistor Colors, with a - between all of them and All Start with Caps");
         
-        int sub1 = 3;
+
         String ColorInput = Input.next();
         String ColorDetection1 = ColorInput.substring(0,ColorInput.indexOf("-"));
-        String ColorDetection2 = ColorInput.substring(ColorInput.indexOf("-"), ColorInput.lastIndexOf("-"));
-        String ColorDetection3 = ColorInput.substring(ColorInput.lastIndexOf("-"), ColorInput.length());
+        String ColorDetection2 = ColorInput.substring(ColorInput.indexOf("-") + 1, ColorInput.lastIndexOf("-"));
+        String ColorDetection3 = ColorInput.substring(ColorInput.lastIndexOf("-") + 1, ColorInput.length());
+
         
-        
+        for (int i = 0; i < 1; i++){
+            
+            String values2 = String.valueOf(values[i]);
+            String a, b, c;
+            
+            if (colours[i].equals(ColorDetection1)){
+                 a = ColorDetection1;
+            }
+            if (colours[i].equals(ColorDetection2)){
+                 b = ColorDetection2;
+            }
+            if(colours[i].equals(ColorDetection3)){
+                 c = ColorDetection3;
+            }
+
+        }
     
         
         //System.out.println("The Value of your Resistor is " + totalOhms + " Ohms");
